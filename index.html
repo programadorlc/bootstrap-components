@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap Components</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body class="bg-black">
+
+  <!-- MODAL -->
+  <div class="container">
+    <button class="btn btn-primary mt-4" data-bs-toggle="modal" data-bs-target="#myModal">Mostrar modal</button>
+  </div>
+  <div class="modal fade " id="myModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable  text-white ">
+      <div class="modal-content bg-dark ">
+        <div class="modal-header border-0 ">
+          <h4 class="text-danger ">Atenção</h4>
+          <button class="btn-close btn-close-white " data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body ">
+          <p>tem certeza que deseja sair ?</p>
+        </div>
+        <div class="modal-footer border-0 ">
+          <button class="btn btn-danger " data-bs-dismiss="modal">Negar</button>
+          <button class="btn btn-primary ">Aceitar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ACCORDION -->
+  <section class="container mb-4 text-white mt-4 ">
+    <h1 class="text-center mb-4 ">Frequently asked questions</h1>
+    <div class="accordion accordion-flush " id="faq">
+      <div class="accordion-item bg-dark text-white border-black">
+        <h2 class="accordion-header ">
+          <button class="accordion-button text-white collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#item1">
+            How do I create an account?
+          </button>
+        </h2>
+        <div id="item1" class="accordion-collapse collapse   ">
+          <p class="accordion-body text-white-50 ">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate et doloribus aliquam a, sed assumenda
+            minima iusto quia laudantium commodi perferendis quis qui consectetur repellat, eveniet alias nostrum vel!
+            Voluptas.
+          </p>
+        </div>
+      </div>
+      <div class="accordion-item bg-dark text-white border-black">
+        <h2 class="accordion-header ">
+          <button class="accordion-button collapsed text-white" type="button" data-bs-toggle="collapse"
+            data-bs-target="#item2">
+            Is Uber available in my city?
+          </button>
+        </h2>
+        <div id="item2" class="accordion-collapse collapse ">
+          <p class="accordion-body text-white-50 ">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate et doloribus aliquam a, sed assumenda
+            minima iusto quia laudantium commodi perferendis quis qui consectetur repellat, eveniet alias nostrum vel!
+            Voluptas.
+          </p>
+        </div>
+      </div>
+      <div class="accordion-item bg-dark text-white border-black">
+        <h2 class="accordion-header ">
+          <button class="accordion-button collapsed text-white" type="button" data-bs-toggle="collapse"
+            data-bs-target="#item3">
+            How do I request a ride
+          </button>
+        </h2>
+        <div id="item3" class="accordion-collapse collapse ">
+          <p class="accordion-body text-white-50 ">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate et doloribus aliquam a, sed assumenda
+            minima iusto quia laudantium commodi perferendis quis qui consectetur repellat, eveniet alias nostrum vel!
+            Voluptas.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CARDS -->
+  <section class=" container d-xl-flex flex-xs-column justify-content-between gap-4 ">
+    <div class="card border-primary bg-dark text-white mb-4">
+      <h3 class="card-header text-primary ">
+        Individual
+      </h3>
+      <div class="card-body">
+        <h6 class="card-subtitle ">
+          $9.99 CAD/month after offer period 1 account
+        </h6>
+        <hr>
+        <ul>
+          <li>Ad-free music listening</li>
+          <li>Play anywhere - even offline</li>
+          <li>On-demand playback</li>
+        </ul>
+        <a class="card-link btn btn-primary">GET STARTED</a>
+      </div>
+      <div class="card-footer text-center text-danger fw-bold">LIMITED-TIME OFFER</div>
+    </div>
+
+    <div class="card border-primary bg-dark text-white mb-4">
+      <h3 class="card-header text-primary ">
+        Individual
+      </h3>
+      <div class="card-body">
+        <h6 class="card-subtitle ">
+          $9.99 CAD/month after offer period 1 account
+        </h6>
+        <hr>
+        <ul>
+          <li>Ad-free music listening</li>
+          <li>Play anywhere - even offline</li>
+          <li>On-demand playback</li>
+        </ul>
+        <a class="card-link btn btn-primary">GET STARTED</a>
+      </div>
+      <div class="card-footer text-center text-danger fw-bold">LIMITED-TIME OFFER</div>
+    </div>
+
+    <div class="card border-primary bg-dark text-white mb-4">
+      <h3 class="card-header text-primary ">
+        Individual
+      </h3>
+      <div class="card-body">
+        <h6 class="card-subtitle ">
+          $9.99 CAD/month after offer period 1 account
+        </h6>
+        <hr>
+        <ul>
+          <li>Ad-free music listening</li>
+          <li>Play anywhere - even offline</li>
+          <li>On-demand playback</li>
+        </ul>
+        <a class="card-link btn btn-primary">GET STARTED</a>
+      </div>
+      <div class="card-footer text-center text-danger fw-bold">LIMITED-TIME OFFER</div>
+    </div>
+  </section>
+
+  <!-- COLLAPSE  -->
+  <section class="container mb-4">
+    <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target=".myClass">Collapse</button>
+    <div class="collapse myClass">
+      <div class="card border-primary">
+        <div class="card-body bg-dark text-white-50">
+          Esse conteúdo é colapsável
+        </div>
+      </div>
+    </div>
+    <div class="collapse myClass">
+      <div class="card border-primary">
+        <div class="card-body bg-dark text-white-50">
+          Esse conteúdo também é colapsável
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"
+    integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
