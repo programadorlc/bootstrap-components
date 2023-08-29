@@ -13,3 +13,8 @@
   height: 10px;
   border-radius: 9999%;
 }
+
+.red-tooltip {
+  --bs-tooltip-bg: red;
+  --bs-tooltip-color: white;
+}
