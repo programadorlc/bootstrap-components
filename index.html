@@ -8,34 +8,128 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
   <link rel="stylesheet" href="./style.css">
+  <link rel="shortcut icon" href="./images/favicon_transparent_32x32.svg" type="image/x-icon">
 </head>
 
 <body class="bg-black">
+  <!-- NAV -->
+  <nav class="navbar navbar-expand-sm navbar-dark bg-dark ">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img src="./images/favicon_transparent_32x32.png" alt="" srcset=""></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon "></span>
+      </button>
+      <div id="navbarNav" class="navbar-collapse collapse">
+        <ul class="navbar-nav nav-pills nav-fill">
+          <li class="nav-item "><a class="nav-link active" href="#">Docs</a></li>
+          <li class="nav-item "><a class="nav-link a" href="#">Examples</a></li>
+          <li class="nav-item "><a class="nav-link a" href="#">Icons</a></li>
+          <li class="nav-item "><a class="nav-link a" href="#">Themes</a></li>
+          <li class="nav-item "><a class="nav-link a" href="#">Blog</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-  <!-- MODAL -->
-  <div class="container">
-    <button class="btn btn-primary mt-4" data-bs-toggle="modal" data-bs-target="#myModal">Mostrar modal</button>
-  </div>
-  <div class="modal fade " id="myModal" tabindex="-1">
-    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable  text-white ">
-      <div class="modal-content bg-dark ">
-        <div class="modal-header border-0 ">
-          <h4 class="text-danger ">Atenção</h4>
-          <button class="btn-close btn-close-white " data-bs-dismiss="modal"></button>
+  <!-- DROPDOWN -->
+  <!-- <div class="dropdown container">
+    <button class="btn btn-primary dropdown-toggle mb-1" type="button" data-bs-toggle="dropdown" aria-expanded="false"
+      data-bs-auto-close="outside">
+      Dropdown button
+    </button>
+    <ul class="dropdown-menu dropdown-menu-dark">
+      <li><a class="dropdown-item" href="#">Action</a></li>
+      <li><a class="dropdown-item" href="#">Another action</a></li>
+      <li>
+        <hr class="dropdown-divider ">
+      </li>
+      <li>
+        <div class="dropend">
+          <button class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown">Settings</button>
+          <ul class="dropdown-menu dropdown-menu-dark">
+            <li class="dropdown-item ">Teste</li>
+          </ul>
         </div>
-        <div class="modal-body ">
-          <p>tem certeza que deseja sair ?</p>
-        </div>
-        <div class="modal-footer border-0 ">
-          <button class="btn btn-danger " data-bs-dismiss="modal">Negar</button>
-          <button class="btn btn-primary ">Aceitar</button>
+      </li>
+    </ul>
+  </div> -->
+
+  <!-- COROUSEL -->
+  <section id="myCarousel" class="carousel slide mb-4" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true"
+        aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="./images/img1.webp" class="d-block w-100 " alt="">
+      </div>
+      <div class="carousel-item ">
+        <img src="./images/img2.webp" class="d-block w-100 " alt="">
+      </div>
+      <div class="carousel-item ">
+        <img src="./images/img3.webp" class="d-block w-100 " alt="">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden ">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </section>
+
+  <!-- MODAL AND COLLAPSE -->
+  <section class="container d-flex justify-content-center ">
+    <!-- MODAL -->
+    <div class="container mb-4 ">
+      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">Mostrar modal</button>
+    </div>
+    <div class="modal fade " id="myModal" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable  text-white ">
+        <div class="modal-content bg-dark ">
+          <div class="modal-header border-0 ">
+            <h4 class="text-danger ">Atenção</h4>
+            <button class="btn-close btn-close-white " data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body ">
+            <p>tem certeza que deseja sair ?</p>
+          </div>
+          <div class="modal-footer border-0 ">
+            <button class="btn btn-danger " data-bs-dismiss="modal">Negar</button>
+            <button class="btn btn-primary ">Aceitar</button>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+
+    <!-- COLLAPSE  -->
+    <section class="container mb-4">
+      <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target=".myClass">Collapse</button>
+      <div class="collapse myClass">
+        <div class="card border-primary">
+          <div class="card-body bg-dark text-white-50">
+            Esse conteúdo é colapsável
+          </div>
+        </div>
+      </div>
+      <div class="collapse myClass">
+        <div class="card border-primary">
+          <div class="card-body bg-dark text-white-50">
+            Esse conteúdo também é colapsável
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </section>
 
   <!-- ACCORDION -->
-  <section class="container mb-4 text-white mt-4 ">
+  <section class="container mb-4 text-white">
     <h1 class="text-center mb-4 ">Frequently asked questions</h1>
     <div class="accordion accordion-flush " id="faq">
       <div class="accordion-item bg-dark text-white border-black">
@@ -146,24 +240,27 @@
     </div>
   </section>
 
-  <!-- COLLAPSE  -->
-  <section class="container mb-4">
-    <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target=".myClass">Collapse</button>
-    <div class="collapse myClass">
-      <div class="card border-primary">
-        <div class="card-body bg-dark text-white-50">
-          Esse conteúdo é colapsável
-        </div>
-      </div>
-    </div>
-    <div class="collapse myClass">
-      <div class="card border-primary">
-        <div class="card-body bg-dark text-white-50">
-          Esse conteúdo também é colapsável
-        </div>
-      </div>
-    </div>
-  </section>
+  <!-- BUTTONS NAVIGATIONS -->
+  <div class="container mb-4">
+    <nav aria-label="Page navigation">
+      <ul class="pagination justify-content-center ">
+        <li class="page-item disabled "><a class="page-link " href="#">Previous</a></li>
+        <li class="page-item active "><a class="page-link " href="#">1</a></li>
+        <li class="page-item "><a class="page-link " href="#">2</a></li>
+        <li class="page-item "><a class="page-link " href="#">3</a></li>
+        <li class="page-item "><a class="page-link " href="#">4</a></li>
+        <li class="page-item "><a class="page-link " href="#">Next</a></li>
+      </ul>
+    </nav>
+  </div>
+  </div>
+
+
+
+
+
+
+
 
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
     integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
