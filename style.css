@@ -18,3 +18,10 @@
   --bs-tooltip-bg: red;
   --bs-tooltip-color: white;
 }
+
+.dark-popover {
+  --bs-popover-bg: #212529;
+  --bs-popover-header-bg: #212529;
+  --bs-popover-body-color: white;
+  --bs-popover-header-color: white;
+}

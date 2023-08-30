@@ -33,8 +33,8 @@
   </nav>
 
   <!-- DROPDOWN -->
-  <!-- <div class="dropdown container">
-    <button class="btn btn-primary dropdown-toggle mb-1" type="button" data-bs-toggle="dropdown" aria-expanded="false"
+  <div class="dropdown">
+    <button class="btn btn-dark dropdown-toggle mb-1" type="button" data-bs-toggle="dropdown" aria-expanded="false"
       data-bs-auto-close="outside">
       Dropdown button
     </button>
@@ -53,7 +53,7 @@
         </div>
       </li>
     </ul>
-  </div> -->
+  </div>
 
   <!-- COROUSEL -->
   <section id="myCarousel" class="carousel slide mb-4" data-bs-ride="carousel">
@@ -83,6 +83,28 @@
       <span class="visually-hidden">Next</span>
     </button>
   </section>
+
+  <!-- POPOVER AND POPPER -->
+  <div class="container d-flex justify-content-center align-items-center gap-2 mt-4 mb-4">
+    <button class="btn btn-primary" data-bs-toggle="tooltip" data-bs-title="Download">
+      <i class="bi bi-download"></i>
+    </button>
+    <button class="btn btn-primary" data-bs-toggle="tooltip" data-bs-title="Upload">
+      <i class="bi bi-upload"></i>
+    </button>
+    <button class="btn btn-danger" data-bs-custom-class="red-tooltip" data-bs-toggle="tooltip" data-bs-title="Trash">
+      <i class="bi bi-trash"></i>
+    </button>
+    <button type="button" class="btn btn-lg btn-danger" data-bs-custom-class="dark-popover" data-bs-toggle="popover"
+      data-bs-title="Popover title" data-bs-content="
+      <ul>
+        <li>item1</li>
+        <li>item2</li>
+        <li>item3</li>
+      </ul>
+      <a href='#'>Click here</a>
+      " data-bs-html="true">Click to toggle popover</button>
+  </div>
 
   <!-- MODAL AND COLLAPSE -->
   <section class="container d-flex justify-content-center ">
@@ -269,6 +291,13 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"
     integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa"
     crossorigin="anonymous"></script>
+  <script>
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+    const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+
+    const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+    const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+  </script>
 </body>
 
 </html>
